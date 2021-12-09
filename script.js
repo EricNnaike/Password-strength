@@ -35,4 +35,3 @@ function validatePassword() {
     document.getElementById('textIn').innerHTML = passwordStrength;
 }
 
-/*  */
