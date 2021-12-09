@@ -1,16 +1,20 @@
 let myInput = document.getElementById('pwd');
 
+
+
 function validatePassword() {
 
     let password = String(myInput.value);
 
-    // if (password.length < 6) {
-    //     return "Minimum password length is 6";
-    // }
+    let myText;
 
-    // if (password.length > 12) {
-    //     return "Maximum password length is 12";
-    // }
+    if (password.length < 6) {
+        myText = "Minimum password length is 6";
+    }
+
+    if (password.length > 12) {
+        myText = "Maximum password length is 12";
+    }
 
     let passwordStrength = 0;
 
@@ -30,8 +34,11 @@ function validatePassword() {
         passwordStrength += 25;
     }
 
-    // return '${passwordStrength}%';
 
     document.getElementById('textIn').innerHTML = passwordStrength;
+    
+    document.getElementById('display').innerHTML = myText;
+    
+    // return passwordStrength;
+    return myText;
 }
-
